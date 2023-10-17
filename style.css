@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
+  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
@@ -78,7 +81,7 @@ nav a:hover::after {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 0px;
 }
 
 #home .container {
@@ -122,12 +125,12 @@ nav a:hover::after {
 @keyframes typing {
   0% {
     width: 0;
-    -webkit-text-stroke: 2px #ff004f;
+    -webkit-text-stroke: 2px #80787b;
   }
 
   100% {
     width: 100%;
-    -webkit-text-stroke: 2px #ff004f;
+    -webkit-text-stroke: 2px #80787b;
   }
 }
 
@@ -138,13 +141,218 @@ nav a:hover::after {
   }
 
   50% {
-    border-color: rgb(192, 27, 55);
+    border-color: #80787b;
   }
 }
 
+/* About Section  */
+#about {
+  padding-top: 6%;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  display: table;
+}
+
+#about .container-1 {
+  display: table-cell;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  /* margin-right: 20px; */
+  padding: 16px;
+}
+
+/* .img-1 {
+  flex-basis: 35%;
+} */
+
+/* .container-1 .img-1 img {
+  width: 400px;
+  border-radius: 15px;
+  margin-left: 10px;
+} */
+
+.text-1 {
+  background-color: #383535;
+  text-align: center;
+}
+
+.text-1 p {
+  margin: 10px;
+  align-items: center;
+}
+
+.upper-title {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* For hover effects in about */
+.container-2 {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 320px;
+  top: 5px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container-2 .card {
+  position: relative;
+  background-color: #221f1f;
+  max-width: 200px;
+  height: 200px;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease-in-out;
+  border-radius: 25px;
+}
+
+.container-2 .card:hover {
+  height: 320px;
+  box-shadow: rgb(31, 180, 88) -5px 30px 40px -10px,
+    rgb(42, 175, 232) 10px 30px 40px -10px;
+}
+
+.container-2 .card .imgBx {
+  position: relative;
+  width: 150px;
+  height: 130px;
+  top: -60px;
+  left: 35px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0, 5);
+}
+
+.container-2 .card .imgBx img {
+  max-width: 100px;
+}
+
+.container-2 .card .content {
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  color: #d4cece;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.container-2 .card:hover .content {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -60px;
+  transition-delay: 0.3s;
+}
+
+.content p {
+  font-size: 15px;
+  word-spacing: 3px;
+}
+
+/* For Project Section */
+#project {
+  padding-top: 6%;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  position: relative;
+}
+
+#project h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.my-project {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 520px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.my-project .work {
+  position: relative;
+  background-color: #221f1f;
+  max-width: 300px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  box-shadow: rgb(31, 180, 88) -5px 30px 40px -10px,
+    rgb(42, 175, 232) 10px 30px 40px -10px;
+}
+
+.my-project .work .icon i {
+  position: relative;
+  width: 50px;
+  color: #80787b;
+  height: 50px;
+  top: -30px;
+  font-size: 70px;
+  margin-left: 40%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0, 5);
+}
+
+.my-project .work .content-1 {
+  position: relative;
+  padding: 0 15px;
+  color: #d4cece;
+  text-align: center;
+}
+
+.content-1 p {
+  font-size: 15px;
+  word-spacing: 3px;
+}
+
+.press {
+  position: relative;
+  top: 30px;
+  background: #80787b;
+  width: 50%;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.press:hover {
+  background: #23d323;
+  color: #000000;
+  box-shadow: 0 12px 16px 0 rgba(160, 51, 156, 0.24),
+    0 17px 50px 0 rgba(7, 134, 156, 0.19);
+}
+
+.press a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 40px;
+  width: 60px;
+  height: 60px;
+}
+
+.press a:hover {
+  color: #383535;
+}
+
+/* Responsive Section */
 @media screen and (max-width: 548px) {
+  /* For NavBar */
   label {
     display: block;
+  }
+
+  header {
+    height: 10%;
   }
 
   nav {
@@ -153,7 +361,7 @@ nav a:hover::after {
     background: #fff;
     flex-direction: column;
     top: 10px;
-    right: 10px;
+    right: 20px;
     padding: 10px;
     border-radius: 5px;
     visibility: hidden;
@@ -163,7 +371,8 @@ nav a:hover::after {
     z-index: 999;
   }
 
-  nav a, nav label {
+  nav a,
+  nav label {
     color: #111;
     font-size: 20px;
   }
@@ -177,6 +386,7 @@ nav a:hover::after {
     opacity: 1;
   }
 
+  /* For Home Section */
   #home {
     position: relative;
     margin: 0;
@@ -186,22 +396,107 @@ nav a:hover::after {
     padding: 10px;
   }
   .container {
-    position: absolute;
-    flex-direction: column-reverse;
-    align-items: center;
+    position: block;
   }
 
   #home .container img {
     position: absolute;
-    background-size: 90px;
+    width: 200px;
+    top: 70px;
     margin-left: 5px;
-    background-position: center;
+    border-radius: 50%;
+    border: 2px solid #fff;
   }
 
   .text {
-    position: absolute;
-    margin-top: 5px;
+    position: relative;
+    top: 25%;
+  }
+
+  .text h1 {
+    position: relative;
+    font-size: 40px;
+  }
+  .text p {
     font-size: 20px;
+  }
+
+  /* For About Section */
+
+  #about {
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 100%;
+    justify-content: center;
     align-items: center;
+    padding: 0;
+  }
+
+  .container-1 {
+    display: inline;
+    padding: 10px;
+    word-spacing: 5px;
+  }
+
+  .text-1 {
+    padding: 25px;
+    margin-top: 20px;
+  }
+
+  .container-2 {
+    display: inline;
+    position: relative;
+    top: 40px;
+  }
+  .container-2 .card {
+    display: flex;
+    position: relative;
+    left: 16%;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+  }
+
+  /* For ProjectSection */
+  #project {
+    position: relative;
+    display: block;
+    margin-top: 30px;
+    width: 100%;
+    padding: 0;
+    top: 45rem;
+    z-index: 10;
+  }
+  #project h1 {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  .my-project {
+    display: inline-block;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-height: 500px;
+    gap: 70px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin-top: 10px;
+  }
+  .my-project .work {
+    display: flex;
+    position: relative;
+    height: 450px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid aqua;
+  }
+  .work .icon {
+    position: relative;
+    right: 27px;
   }
 }
