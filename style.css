@@ -345,7 +345,7 @@ nav a:hover::after {
 }
 
 /* Responsive Section */
-@media screen and (max-width: 548px) {
+@media screen and (max-width: 588px) {
   /* For NavBar */
   label {
     display: block;
@@ -353,6 +353,7 @@ nav a:hover::after {
 
   header {
     height: 7%;
+    z-index: 999;
   }
 
   nav {
@@ -441,7 +442,7 @@ nav a:hover::after {
 
   .text-1 {
     padding: 25px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
   }
 
   .container-2 {
@@ -470,7 +471,7 @@ nav a:hover::after {
     z-index: 10;
   }
   #project h1 {
-    padding-top: 70px;
+    padding-top: 0;
     display: flex;
     justify-content: center;
   }
@@ -481,17 +482,16 @@ nav a:hover::after {
     align-items: center;
     width: 100%;
     max-height: 500px;
-    gap: 70px;
-    display: flex;
+    left: 14%;
     flex-direction: column;
-    padding: 30px;
-    margin-top: 10px;
+    z-index: 10;
   }
   .my-project .work {
     display: flex;
     position: relative;
-    height: 450px;
+    height: 350px;
     width: 100%;
+    margin-top: 50px;
     justify-content: center;
     align-items: center;
     border: 2px solid aqua;
@@ -500,4 +500,80 @@ nav a:hover::after {
     position: relative;
     right: 27px;
   }
+}
+
+@media screen and (max-width: 790px) {
+  /* for NavBar section */
+  label {
+    display: block;
+  }
+
+  header {
+    height: 7%;
+  }
+
+ i{
+    font-size: 30px;
+  }
+
+  nav {
+    position: fixed;
+    width: 200px;
+    background: #fff;
+    flex-direction: column;
+    top: 10px;
+    right: 70px;
+    padding: 10px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    align-items: center;
+    transition: 0.3s ease;
+    z-index: 999;
+  }
+
+  nav a,
+  nav label {
+    color: #111;
+    font-size: 20px;
+  }
+
+  nav label {
+    text-align: right;
+  }
+
+  input:checked ~ nav {
+    visibility: visible;
+    opacity: 1;
+  }
+
+/* For Home Section */
+  #home .container img {
+    position: absolute;
+    width: 300px;
+    top: 15%;
+    margin-left: 5px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+  }
+
+  .text {
+    position: relative;
+    top: 25%;
+  }
+
+  /* Project Section */
+    .my-project {
+    display: inline-block;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-height: 500px;
+
+    flex-direction: column;
+    padding: 30px;
+    margin-top: 10px;
+  }
+
 }
